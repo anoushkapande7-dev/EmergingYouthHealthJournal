@@ -190,5 +190,33 @@ function searchArticles() {
   }
 }
 </script>
+  <script>
+function searchPapers() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let articles = document.getElementsByClassName("article");
+
+  for (let i = 0; i < articles.length; i++) {
+    let text = articles[i].getAttribute("data-title");
+    articles[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
+
+function filterCategory(cat) {
+  let articles = document.getElementsByClassName("article");
+
+  for (let i = 0; i < articles.length; i++) {
+    let c = articles[i].getAttribute("data-category");
+    articles[i].style.display = (c === cat) ? "" : "none";
+  }
+}
+
+function filterAll() {
+  let articles = document.getElementsByClassName("article");
+
+  for (let i = 0; i < articles.length; i++) {
+    articles[i].style.display = "";
+  }
+}
+</script>
 </body>
 </html>
