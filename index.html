@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<h1 style="margin:0;font-family:Georgia;">
-<span style="color:#1a73e8;">YMRJ</span> — Youth Medical Research Journal
-<p style="color:gray;margin-top:5px;">
-Student-led peer-reviewed journal in medicine & public health
-</p>
-</h1>
+<title>YMRJ - Youth Medical Research Journal</title>
 
 <style>
 body{
@@ -22,7 +17,7 @@ border-bottom:1px solid #ddd;
 }
 
 nav a{
-margin-right:20px;
+margin-right:15px;
 text-decoration:none;
 color:#333;
 font-weight:bold;
@@ -51,6 +46,7 @@ color:white;
 padding:10px 20px;
 text-decoration:none;
 border-radius:5px;
+display:inline-block;
 }
 
 footer{
@@ -59,53 +55,59 @@ color:white;
 padding:20px;
 text-align:center;
 }
+
+.brand{
+font-family:Georgia;
+margin:0;
+}
+
+.tagline{
+color:gray;
+margin-top:5px;
+font-size:14px;
+}
 </style>
+
 </head>
 
 <body>
 
-<header style="background:white;padding:20px;border-bottom:1px solid #ddd;">
+<!-- HEADER (ONLY ONCE) -->
+<header>
 
-
+<h1 class="brand">
+<span style="color:#1a73e8;">YMRJ</span> — Youth Medical Research Journal
 </h1>
 
-<nav style="margin-top:10px;">
-<a href="index.html" style="margin-right:15px;">Home</a>
-<a href="archive.html" style="margin-right:15px;">Archive</a>
-<a href="index.html#issue" style="margin-right:15px;">Latest Issue</a>
-<a href="peer-review.html" style="margin-right:15px;">Peer Review</a>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform?usp=header"
-target="_blank">Submit</a>
-</nav>
-
-<div style="font-size:12px;color:gray;margin-top:5px;">
-Student-Led Peer-Reviewed Medical Journal
-</div>
-
-</header>
-<h1>Youth Medical Research Journal</h1>
+<p class="tagline">
+Student-led peer-reviewed journal in medicine & public health
+</p>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Articles</a>
-<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform?usp=header" target="_blank">
-Submit Research
-</a>
+<a href="index.html">Home</a>
 <a href="archive.html">Archive</a>
-<a href="#">Editorial Board</a>
+<a href="peer-review.html">Peer Review</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform?usp=header" target="_blank">
+Submit
+</a>
 </nav>
+
 </header>
 
+<!-- HERO -->
 <div class="hero">
+
 <h2>Advancing Student Research in Medicine</h2>
+
 <p>A peer-reviewed student journal publishing research in medicine and public health.</p>
 
 <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform?usp=header" target="_blank">
 Submit Research
 </a>
+
 </div>
 
+<!-- LATEST ISSUE -->
 <div class="section">
 
 <h2>Latest Issue</h2>
@@ -114,27 +116,20 @@ Submit Research
 
 <ul>
 <li><a href="article-water-quality.html">Water Quality Analysis Study</a></li>
-<li><a href="#">Pediatric Asthma Trends</a></li>
-<li><a href="#">Healthcare Accessibility Study</a></li>
+<li>Pediatric Asthma Trends</li>
+<li>Healthcare Accessibility Study</li>
 </ul>
 
 </div>
 
+<!-- FEATURED -->
 <div class="section">
 
 <h2>Featured Research</h2>
 
-</div>
 <div class="article">
-
-<h3>
-<a href="article-water-quality.html">
-Water Quality Analysis of Public Sites in New Jersey
-</a>
-</h3>
-
+<h3><a href="article-water-quality.html">Water Quality Analysis of Public Sites in New Jersey</a></h3>
 <p>Student investigation analyzing chemical parameters in drinking water.</p>
-
 </div>
 
 <div class="article">
@@ -149,10 +144,10 @@ Water Quality Analysis of Public Sites in New Jersey
 
 </div>
 
+<!-- CALL FOR PAPERS -->
 <div class="section">
 
 <h2>Call for Papers</h2>
-<p>We are accepting research submissions in:</p>
 
 <ul>
 <li>Medicine</li>
