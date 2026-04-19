@@ -162,6 +162,21 @@ style="width:90%;padding:10px;margin:20px;display:block;">
 <footer>
 <p>Student-Led Medical Research Journal</p>
 </footer>
+<script>
+function searchArticles() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let articles = document.getElementsByClassName("article");
 
+  for (let i = 0; i < articles.length; i++) {
+    let text = articles[i].getAttribute("data-title").toLowerCase();
+
+    if (text.includes(input)) {
+      articles[i].style.display = "";
+    } else {
+      articles[i].style.display = "none";
+    }
+  }
+}
+</script>
 </body>
 </html>
