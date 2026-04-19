@@ -30,7 +30,17 @@ font-weight:bold;
 </style>
 
 </head>
+<script>
+function searchPapers() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let papers = document.getElementsByClassName("paper");
 
+  for (let i = 0; i < papers.length; i++) {
+    let text = papers[i].innerText.toLowerCase();
+    papers[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
+</script>
 <body>
 <header style="background:white;padding:20px;border-bottom:1px solid #ddd;">
 
