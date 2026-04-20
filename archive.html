@@ -77,8 +77,8 @@ function searchPapers() {
   let papers = document.getElementsByClassName("paper");
 
   for (let i = 0; i < papers.length; i++) {
-    let text = papers[i].getAttribute("data-title");
-
+   let text = papers[i].getAttribute("data-title").toLowerCase();
+    
     if (text.includes(input)) {
       papers[i].style.display = "";
     } else {
