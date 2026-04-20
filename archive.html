@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Archive - YMRJ</title>
 <link rel="stylesheet" href="styles.css">
+</head>
 
-
-/* HEADER */
-<header>
+<body>
 
 <header>
 <div class="container">
@@ -30,84 +30,46 @@ Peer-reviewed student research in medicine and public health
 </div>
 </header>
 
-</header>
 
+<div class="container">
 
+<div class="section">
 
-/* LAYOUT */
-.container{
-max-width:1050px;
-margin:0 auto;
-}
+<h2>Journal Archive</h2>
 
-/* SECTIONS */
-.section{
-background:var(--card);
-margin:22px auto;
-padding:28px;
-border-radius:14px;
-border:1px solid var(--border);
-}
+<input 
+type="text" 
+onkeyup="searchPapers()" 
+id="archiveSearch" 
+placeholder="Search papers..."
+style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:20px;"
+>
 
-/* HERO */
-.hero{
-background:linear-gradient(to right, #ffffff, #f8faff);
-padding:45px 28px;
-border-bottom:1px solid var(--border);
-}
-
-/* ARTICLES */
-.article{
-padding:16px 0;
-border-bottom:1px solid var(--border);
-}
-
-.article:last-child{
-border-bottom:none;
-}
-
-.article h3{
-margin:0;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-color:var(--muted);
-font-size:13px;
-margin-top:40px;
-}
-
-/* BADGE */
-.badge{
-display:inline-block;
-padding:4px 10px;
-font-size:12px;
-background:#eef3ff;
-color:var(--accent);
-border-radius:20px;
-margin-bottom:10px;
-}
-
-</header>
-<body>
-
-<h1>Journal Archive</h1>
-
-<input type="text" onkeyup="searchPapers()" id="archiveSearch" placeholder="Search papers...">
-
-<div class="paper" data-title="water quality new jersey">
-<a href="article-water-quality.html">Water Quality Analysis Study</a>
+<div class="paper article" data-title="water quality new jersey">
+<h3>
+<a href="article-water-quality.html">
+Water Quality Analysis of Public Sites in New Jersey
+</a>
+</h3>
 </div>
 
-<div class="paper" data-title="pediatric asthma">
-Pediatric Asthma Trends
+<div class="paper article" data-title="pediatric asthma">
+<h3>Pediatric Asthma Trends</h3>
 </div>
 
-<div class="paper" data-title="healthcare accessibility">
-Healthcare Accessibility Study
+<div class="paper article" data-title="healthcare accessibility">
+<h3>Healthcare Accessibility Study</h3>
 </div>
+
+</div>
+
+</div>
+
+
+<footer>
+Youth Medical Research Journal • Student-led research publication
+</footer>
+
 
 <script>
 function searchPapers() {
@@ -115,9 +77,13 @@ function searchPapers() {
   let papers = document.getElementsByClassName("paper");
 
   for (let i = 0; i < papers.length; i++) {
-    let text = papers[i].getAttribute("data-title").toLowerCase();
+    let text = papers[i].getAttribute("data-title");
 
-    papers[i].style.display = text.includes(input) ? "" : "none";
+    if (text.includes(input)) {
+      papers[i].style.display = "";
+    } else {
+      papers[i].style.display = "none";
+    }
   }
 }
 </script>
