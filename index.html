@@ -1,43 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>YMRJ - Youth Medical Research Journal</title>
 <link rel="stylesheet" href="styles.css">
-
 </head>
-<script>
-function searchArticles() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let articles = document.getElementsByClassName("article");
 
-  for (let i = 0; i < articles.length; i++) {
-    let text = articles[i].getAttribute("data-title") || "";
-
-    if (text.toLowerCase().includes(input)) {
-      articles[i].style.display = "";
-    } else {
-      articles[i].style.display = "none";
-    }
-  }
-}
-</script>
 <body>
 
-<!-- MASTHEAD -->
-<header style="background:white;border-bottom:1px solid #e6e6e6;padding:18px 0;">
-  <div class="container">
-
-    <h1 style="font-family:Georgia;margin:0;font-size:26px;">
-      <span style="color:#1a73e8;">YMRJ</span> Youth Medical Research Journal
-    </h1>
-
-    <p style="margin:5px 0;color:#666;font-size:13px;">
-      Peer-reviewed student research in medicine, public health, and biomedical science
-    </p>
-
-  </div>
+<!-- HEADER -->
+<header>
 <div class="container">
-</header>
+
 <h1>
 <span class="logo-accent">YMRJ</span> Youth Medical Research Journal
 </h1>
@@ -51,124 +25,113 @@ Peer-reviewed student research in medicine and public health
 <a href="archive.html">Archive</a>
 <a href="peer-review.html">Peer Review</a>
 <a href="editorial-board.html">Editorial Board</a>
-<a class="submit-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform" target="_blank">Submit Research</a>
+<a class="submit-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform" target="_blank">
+Submit Research
+</a>
 </nav>
 
 </div>
+</header>
 
 <!-- ISSUE LABEL -->
 <div class="container" style="padding-top:10px;color:#555;font-size:13px;">
-  Volume 1 • Issue 1 • 2026
-</header>
-</div>
-<!-- FEATURED ARTICLE -->
-<div class="container">
-
-  <div class="section">
-
-    <h2>Featured Article</h2>
-
-    <h3 style="font-size:22px;margin-top:10px;">
-      <a href="article-water-quality.html">
-      <div class="article" data-title="water quality new jersey public health">
-        Water Quality Analysis of Public Sites in New Jersey
-      </a>
-    </h3>
-
-    <p style="color:#555;">
-      A student-led public health investigation assessing chemical safety of municipal drinking water using standardized testing methods.
-    </p>
-
-  </div>
-
+Volume 1 • Issue 1 • 2026
 </div>
 
-<!-- MAIN CONTENT GRID -->
+<!-- FEATURED -->
 <div class="container">
 
-  <div class="section">
+<div class="section">
 
-    <h2>Research Articles</h2>
+<h2>Featured Article</h2>
 
- <div class="article" data-title="pediatric asthma environmental medicine">
-      <h3>Pediatric Asthma Trends</h3>
-      <p style="color:#666;font-size:14px;">
-        Environmental and urban risk factors influencing respiratory health outcomes.
-      </p>
-    </div>
+<div class="article" data-title="water quality new jersey public health">
 
-   <div class="article" data-title="healthcare accessibility public health">
-      <h3>Healthcare Accessibility Study</h3>
-      <p style="color:#666;font-size:14px;">
-        Analysis of disparities in healthcare access across socioeconomic groups.
-      </p>
-    </div>
+<h3>
+<a href="article-water-quality.html">
+Water Quality Analysis of Public Sites in New Jersey
+</a>
+</h3>
 
-  </div>
+<p style="color:#555;">
+A student-led public health investigation assessing chemical safety of municipal drinking water.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ARTICLES -->
+<div class="container">
+
+<div class="section">
+
+<h2>Research Articles</h2>
+
+<div class="article" data-title="pediatric asthma environmental medicine">
+<h3>Pediatric Asthma Trends</h3>
+<p style="color:#666;font-size:14px;">
+Environmental and urban risk factors influencing respiratory health outcomes.
+</p>
+</div>
+
+<div class="article" data-title="healthcare accessibility public health">
+<h3>Healthcare Accessibility Study</h3>
+<p style="color:#666;font-size:14px;">
+Analysis of disparities in healthcare access across socioeconomic groups.
+</p>
+</div>
+
+</div>
 
 </div>
 
 <!-- CALL FOR PAPERS -->
 <div class="container">
 
-  <div class="section">
+<div class="section">
 
-    <h2>Call for Submissions</h2>
+<h2>Call for Submissions</h2>
 
-    <p style="color:#555;">
-      We welcome student research in:
-    </p>
+<p style="color:#555;">
+We welcome student research in:
+</p>
 
-    <ul style="color:#444;">
-      <li>Medicine</li>
-      <li>Public Health</li>
-      <li>Biomedical Science</li>
-      <li>Healthcare Policy</li>
-    </ul>
+<ul style="color:#444;">
+<li>Medicine</li>
+<li>Public Health</li>
+<li>Biomedical Science</li>
+<li>Healthcare Policy</li>
+</ul>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform?usp=header"
-       style="display:inline-block;margin-top:10px;background:#1a73e8;color:white;padding:10px 14px;border-radius:6px;text-decoration:none;">
-      Submit Research
-    </a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSehNkYBzzA-GAadDYKuUj1iZQ2ADNlXg70i94ZDr89P5HolnA/viewform"
+style="display:inline-block;margin-top:10px;background:#1a73e8;color:white;padding:10px 14px;border-radius:6px;text-decoration:none;">
+Submit Research
+</a>
 
-  </div>
+</div>
 
 </div>
 
 <!-- FOOTER -->
 <footer style="text-align:center;padding:30px;color:#777;font-size:12px;">
-  • Student-led peer-reviewed publication
+Student-led peer-reviewed publication
 </footer>
 
-</body>
-</script>
-  <script>
-function searchPapers() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
+<!-- ONLY ONE SCRIPT -->
+<script>
+function searchArticles() {
+  let input = document.getElementById("searchInput")?.value?.toLowerCase() || "";
   let articles = document.getElementsByClassName("article");
 
   for (let i = 0; i < articles.length; i++) {
-    let text = articles[i].getAttribute("data-title");
-    articles[i].style.display = text.includes(input) ? "" : "none";
-  }
-}
-
-function filterCategory(cat) {
-  let articles = document.getElementsByClassName("article");
-
-  for (let i = 0; i < articles.length; i++) {
-    let c = articles[i].getAttribute("data-category");
-    articles[i].style.display = (c === cat) ? "" : "none";
-  }
-}
-
-function filterAll() {
-  let articles = document.getElementsByClassName("article");
-
-  for (let i = 0; i < articles.length; i++) {
-    articles[i].style.display = "";
+    let text = articles[i].getAttribute("data-title") || "";
+    articles[i].style.display = text.toLowerCase().includes(input) ? "" : "none";
   }
 }
 </script>
+
 </body>
 </html>
