@@ -56,11 +56,24 @@ font-size:14px;
 }
 
 </style>
-</style>
 
 </head>
+<script>
+function searchArticles() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let articles = document.getElementsByClassName("article");
 
-<body>
+  for (let i = 0; i < articles.length; i++) {
+    let text = articles[i].getAttribute("data-title") || "";
+
+    if (text.toLowerCase().includes(input)) {
+      articles[i].style.display = "";
+    } else {
+      articles[i].style.display = "none";
+    }
+  }
+}
+</script>
 <body>
 
 <!-- MASTHEAD -->
