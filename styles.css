@@ -7,6 +7,17 @@
   --accent-soft:#e8f0ff;
   --border:#e6e6e6;
 }
+.hero-banner{
+width:100%;
+margin-top:10px;
+}
+
+.hero-banner img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+}
 
 body{
 margin:0;
