@@ -159,12 +159,17 @@ Student-led peer-reviewed publication
 <!-- ONLY ONE SCRIPT -->
 <script>
 function searchArticles() {
-  let input = document.getElementById("searchInput")?.value?.toLowerCase() || "";
+  let input = document.getElementById("searchInput").value.toLowerCase();
   let articles = document.getElementsByClassName("article");
 
   for (let i = 0; i < articles.length; i++) {
     let text = articles[i].getAttribute("data-title") || "";
-    articles[i].style.display = text.toLowerCase().includes(input) ? "" : "none";
+
+    if (text.toLowerCase().includes(input)) {
+      articles[i].style.display = "";
+    } else {
+      articles[i].style.display = "none";
+    }
   }
 }
 </script>
