@@ -8,13 +8,7 @@
   --border:#e6e6e6;
 }
 
-.hero-banner{
-width:100%;
-background:#ffffff;
-display:flex;
-justify-content:center;
-margin-top:10px;
-}
+
 
 .hero-banner img{
 width:100%;
